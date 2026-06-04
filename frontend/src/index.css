@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment: #F3F3F3; 
+  --color-sunlit-clay: #F3CD73;
+  --color-sandy-brown: #EDA373;
+  --color-cotton-rose: #FAC7C7;
+  --color-cotton-candy: #F6A2A2;
+  --color-light-coral: #E77872;
+  --color-rich-mahogany: #260903;
+}
+
+body {
+  min-height: 100vh; 
+  background-color: #FCD9D9;
+  background-image: linear-gradient(#F3F3F3, #f7d7d7)
+}
