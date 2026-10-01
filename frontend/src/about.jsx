@@ -1,8 +1,9 @@
 function About(){
  return (
     <div className="rounded-xl bg-linear-to-br from-cotton-rose to-cotton-candy w-150 px-20 py-15 mx-30 my-15">
+        <h2 className="text-2xl opacity-60"> Hello, my name is</h2>
         <h1 className="text-5xl text-rich-mahogany font-bold"> Zeporah Jerome </h1>
-        <h2 className="text-3xl opacity-60"> Hello whazzup</h2>
+        <h3 className="text-xl opacity-60"> Full-Stack Web-Developer </h3>
         <div className="flex my-2">
             <a href="mailto:zeporahrenee@gmail.com" target="_blank">
                 <svg className="w-6 h-6 fill-light-coral transition-colors duration-100 ease-in-out hover:fill-sunlit-clay"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" alt="Email">
