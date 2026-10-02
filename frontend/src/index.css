@@ -3,17 +3,22 @@
 @theme {
   --color-onyx: #161616;
   --color-shadow-gray: #1B1D21;
-  --color-space-indigo: #1E222C;
   --color-cherry-rose: #A81947;
   --color-rose-wine: #C23A6A;
-  --color-platinum: #F4F5F6;
   --color-sky-blue: #0F77C6;
+
+  --color-midnight-violet: #231233;
+  --color-space-indigo: #302856;  
+  --color-indigo-bloom: #8031AA;
+  --color-tropical-teal: #22BCBC;
+  --color-electric-aqua: #7AFFFF;
+  --color-platinum: #E6FFFF;
 }
 
 body {
   min-height: 100vh; 
-  background-color: #161616;
-  background-image: linear-gradient(var(--color-onyx), var(--color-shadow-gray));
+  background-color: #231233;
+  background-image: linear-gradient(var(--color-midnight-violet), var(--color-space-indigo));
 }
 
 *{
