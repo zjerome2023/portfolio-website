@@ -1,10 +1,10 @@
 function About(){
  return (
     // TODO: Change the colors here
-    <div className="rounded-xl bg-linear-to-b from-shadow-gray to-space-indigo w-150 px-20 py-15 mx-auto my-15">
-        <h2 className="text-2xl opacity-60 text-platinum"> Hello, my name is</h2>
-        <h1 className="text-5xl text-platinum font-bold"> Zeporah Jerome </h1>
-        <h3 className="text-xl opacity-60 text-platinum"> Full-Stack Web-Developer </h3>
+    <div className="rounded-xl bg-linear-to-b from-platinum to-platinum w-150 px-20 py-15 mx-auto my-15 opacity-85">
+        <h2 className="text-2xl opacity-60 text-onyx"> Hello, my name is</h2>
+        <h1 className="text-5xl text-cherry-rose font-bold"> Zeporah Jerome </h1>
+        <h3 className="text-xl opacity-60 text-onyx"> Full-Stack Web-Developer </h3>
         <div className="flex my-2">
             <a href="mailto:zeporahrenee@gmail.com" target="_blank">
                 <svg className="w-6 h-6 fill-cherry-rose transition-colors duration-100 ease-in-out hover:fill-rose-wine"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" alt="Email">

@@ -6,11 +6,11 @@ function App() {
   return (
     <>
     <div className='flex flex-col' id='home'>
-      <header className='flex justify-around align-bottom bg-space-indigo w-full h-10 sticky top-0 z-50'>
-        <a className='text-platinum' href='#home'>Home</a>
-        <a className='text-platinum' href='#about'>About Me</a>
-        <a className='text-platinum' href='#projects'>Projects</a>
-        <a className='text-platinum' href='#skills'>Skills</a>
+      <header className='flex justify-around align-bottom bg-shadow-gray w-full h-12 sticky top-0 z-50'>
+        <a className='text-platinum my-auto text-lg' href='#home'>Home</a>
+        <a className='text-platinum my-auto text-lg' href='#about'>About Me</a>
+        <a className='text-platinum my-auto text-lg' href='#projects'>Projects</a>
+        <a className='text-platinum my-auto text-lg' href='#skills'>Skills</a>
       </header>
       <About/>
     </div>

@@ -5,7 +5,7 @@ function LinkCard(props){
         <p className="m-5 max-h-40"> {props.text} </p>
         <div className="flex flex-row w-40 mt-auto mx-auto">
             <a href={props.github} className="bg-cherry-rose text-platinum max-w-20 mx-2 px-3 py-2 mb-2 rounded-md transition-colors ease-in-out duration-100 hover:bg-rose-wine">GitHub</a>
-            <a href={props.link} className="bg-cherry-rose text-platinum max-w-20 mx-2 px-3 py-2 mb-2 rounded-md transition-colors ease-in-out duration-100 hover:bg-rose-wine">Link</a>
+            <a href={props.link} className="bg-cherry-rose text-platinum max-w-20 mx-2 px-3 py-2 mb-2 rounded-md transition-colors ease-in-out duration-100 hover:bg-rose-wine">Live</a>
         </div>
      </div>
  )}       
