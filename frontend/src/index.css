@@ -1,17 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-onyx: #161616;
-  --color-shadow-gray: #1B1D21;
-  --color-cherry-rose: #A81947;
-  --color-rose-wine: #C23A6A;
-  --color-sky-blue: #0F77C6;
 
   --color-midnight-violet: #231233;
   --color-space-indigo: #302856;  
   --color-indigo-bloom: #8031AA;
+  --color-indigo-hover: #8535A2;
   --color-tropical-teal: #22BCBC;
   --color-electric-aqua: #7AFFFF;
+  --color-frozen-water: #D2FFFF;
   --color-platinum: #E6FFFF;
 }
 
