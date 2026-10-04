@@ -1,19 +1,18 @@
 function About(){
  return (
-    // TODO: Change the colors here
-    <div className="rounded-xl bg-linear-to-br from-platinum to-frozen-water w-150 px-20 py-15 mx-auto my-15">
+    <div className="rounded-xl bg-linear-to-br from-platinum to-frozen-water max-w-150 px-20 py-15 mx-auto my-15">
         <h2 className="text-2xl opacity-60 text-midnight-violet"> Hello, my name is</h2>
         <h1 className="text-5xl text-midnight-violet font-bold"> Zeporah Jerome </h1>
         <h3 className="text-xl opacity-60 text-midnight-violet"> Full-Stack Developer </h3>
         <div className="flex my-2">
-            <a className="flex" href="mailto:zeporahrenee@gmail.com" target="_blank">
-                <svg className="w-7 h-7 shrink-0 my-auto fill-indigo-bloom transition duration-100 ease-in-out hover:-translate-y-1"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" alt="Email">
+            <a className="flex" href="mailto:zeporahrenee@gmail.com" target="_blank" rel="noopener noreferrer">
+                <svg className="w-7 h-7 shrink-0 my-auto fill-indigo-bloom transition duration-100 ease-in-out hover:-translate-y-1"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Email">
                     <path d="M22,5V9L12,13,2,9V5A1,1,0,0,1,3,4H21A1,1,0,0,1,22,5ZM2,11.154V19a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V11.154l-10,4Z"/>
                 </svg>
             </a>
 
-            <a className="flex" href="https://www.linkedin.com/in/zeporah-jerome-6377213a5/" target="_blank">
-                <svg className="w-7 h-7 shrink-0 my-auto fill-indigo-bloom transition duration-100 ease-in-out hover:-translate-y-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" alt="LinkedIn">
+            <a className="flex" href="https://www.linkedin.com/in/zeporah-jerome-6377213a5/" target="_blank" rel="noopener noreferrer">
+                <svg className="w-7 h-7 shrink-0 my-auto fill-indigo-bloom transition duration-100 ease-in-out hover:-translate-y-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier"> 
@@ -22,8 +21,8 @@ function About(){
                 </svg>
             </a>
 
-            <a className="flex" href="https://github.com/zjerome2023" target="_blank">
-                <svg className="w-5.75 h-5.75 shrink-0 my-auto fill-indigo-bloom transition duration-100 ease-in-out hover:-translate-y-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" alt="GitHub">
+            <a className="flex" href="https://github.com/zjerome2023" target="_blank" rel="noopener noreferrer">
+                <svg className="w-5.75 h-5.75 shrink-0 my-auto fill-indigo-bloom transition duration-100 ease-in-out hover:-translate-y-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="GitHub">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier"> 
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5808 20.2773 21.0498 21.7438 19.0074C23.2103 16.9651 23.9994 14.5143 24 12C24 5.37 18.63 0 12 0Z"></path> 
