@@ -3,6 +3,7 @@ import LinkCard from './linkcard'
 import About from './about'
 import Divider from './divider'
 import SkillCard from './skillcard'
+import ContactForm from './ContactForm'
 
 import ReactImg from './assets/react.png'
 import ExpressImg from './assets/express.png'
@@ -76,6 +77,10 @@ function App() {
     </div> 
     <div className='flex flex-wrap justify-center w-full my-5'>
     {Skills.filter(item => skill==="all" || item.category == skill).map(filtereditem => <SkillCard image={filtereditem.image} alttxt={filtereditem.alttxt} header={filtereditem.header} text={filtereditem.text}/>)}
+    </div>
+    <Divider text="Contact Me"/>
+    <div className='flex justify-center'>
+      <ContactForm/>
     </div>
 
     <footer className='flex justify-center text-platinum bg-midnight-violet w-full h-12 bottom-0'>
