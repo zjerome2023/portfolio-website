@@ -11,7 +11,17 @@ import TailwindImg from './assets/tailwind.png'
 import JavaScriptImg from './assets/JavaScript.png'
 import PythonImg from './assets/Python.png'
 
+const Skills = [
+  {header:"Python", text:"Programming Language.", alttxt:"Python", image:PythonImg, category:"language"},
+  {header:"JavaScript", text:"Programming Language.", alttxt:"JavaScript", image:JavaScriptImg, category:"language"},
+  {header:"React.JS", text:"JavaScript Library.", alttxt:"React.JS", image:ReactImg, category:"frontend"},
+  {header:"Express.JS", text:"A Node.JS framework.", alttxt:"Express.JS", image:ExpressImg, category:"backend"},
+  {header:"Tailwind CSS", text:"A CSS Framework.", alttxt:"Tailwind CSS", image:TailwindImg, category:"frontend"},
+  {header:"MongoDB", text:"NoSQL Database.", alttxt:"MongoDB", image:MongoDbImg, category:"database"},
+]
+
 function App() {
+      const[skill, setSkill] = useState("all")
   return (
     <>
     <div className='flex flex-col' id='home'></div>
@@ -56,16 +66,25 @@ function App() {
     <div id='skills'>
       <Divider text="Skills"/>
     </div>
+    <div className=' flex justify-center text-[#0E3938] text-lg]'>
+      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("all")}>All</button>
+      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("language")}>Languages</button>
+      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("frontend")}>Frontend</button>
+      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("backend")}>Backend</button>
+      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("database")}>Database</button>
+      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("tool")}>Tools</button>
+    </div> 
     <div className='flex flex-wrap justify-center w-full my-5'>
-      <SkillCard image={PythonImg} alttxt="Python" header="Python" text="Programming Language."/>
-      <SkillCard image={JavaScriptImg} alttxt="JavaScript" header="JavaScript" text="Programming Language."/>
-      <SkillCard image={ReactImg} alttxt="React.JS" header="React.JS" text="JavaScript library."/>
-      <SkillCard image={ExpressImg} alttxt="Express.JS" header="Express.JS" text="A Node.JS framework."/>
-      <SkillCard image={TailwindImg} alttxt="Tailwind CSS" header="Tailwind CSS" text="A CSS framework."/>
-      <SkillCard image={MongoDbImg} alttxt="MongoDB" header="MongoDB" text="NoSQL Database."/>
+    {Skills.filter(item => skill==="all" || item.category == skill).map(filtereditem => <SkillCard image={filtereditem.image} alttxt={filtereditem.alttxt} header={filtereditem.header} text={filtereditem.text}/>)}
     </div>
-    <footer className='flex justify-center text-platinum text-lg bg-midnight-violet w-full h-12 bottom-0'>
-      <p className='my-auto'>Made with React + Tailwind </p>
+
+    <footer className='flex justify-center text-platinum bg-midnight-violet w-full h-12 bottom-0'>
+      <div className='mx-[min(3%,50px)] flex justify-around w-full'>
+        <a href='' className='my-auto'>Email</a>
+        <a href='' className='my-auto'>LinkedIn</a>
+        <a href='' className='my-auto'>GitHub</a>
+        <p className='my-auto'>Made with React + Tailwind </p>
+      </div>
     </footer>
     </>
   )
