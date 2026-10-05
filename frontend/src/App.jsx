@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import LinkCard from './linkcard'
 import About from './about'
 import Divider from './divider'
@@ -64,6 +64,9 @@ function App() {
       <SkillCard image={TailwindImg} alttxt="Tailwind CSS" header="Tailwind CSS" text="A CSS framework."/>
       <SkillCard image={MongoDbImg} alttxt="MongoDB" header="MongoDB" text="NoSQL Database."/>
     </div>
+    <footer className='flex justify-center text-platinum text-lg bg-midnight-violet w-full h-12 bottom-0'>
+      <p className='my-auto'>Made with React + Tailwind </p>
+    </footer>
     </>
   )
 }
