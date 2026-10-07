@@ -5,24 +5,32 @@ import Divider from "./divider"
 import SkillCard from "./skillcard"
 import ContactForm from "./ContactForm"
 
-import ReactImg from "./assets/react.png"
-import ExpressImg from "./assets/express.png"
-import MongoDbImg from "./assets/mongodb.png"
-import TailwindImg from "./assets/tailwind.png"
-import JavaScriptImg from "./assets/JavaScript.png"
-import PythonImg from "./assets/Python.png"
+import ReactImg from "./assets/react.webp"
+import ExpressImg from "./assets/express.webp"
+import MongoDbImg from "./assets/mongodb.webp"
+import TailwindImg from "./assets/tailwind.webp"
+import JavaScriptImg from "./assets/JavaScript.webp"
+import PythonImg from "./assets/Python.webp"
+import GitImg from "./assets/Git.webp"
+import GitHubImg from "./assets/GitHub.webp"
+import NodeJSImg from "./assets/NodeJS.webp"
+import SocketIOImg from "./assets/SocketIo.webp"
 
 const Skills = [
   {header:"Python", text:"Programming Language.", alttxt:"Python", image:PythonImg, category:"language"},
   {header:"JavaScript", text:"Programming Language.", alttxt:"JavaScript", image:JavaScriptImg, category:"language"},
-  {header:"React.JS", text:"JavaScript Library.", alttxt:"React.JS", image:ReactImg, category:"frontend"},
+  {header:"ReactJS", text:"JS Library.", alttxt:"ReactJS", image:ReactImg, category:"frontend"},
   {header:"Express.JS", text:"A Node.JS framework.", alttxt:"Express.JS", image:ExpressImg, category:"backend"},
   {header:"Tailwind CSS", text:"A CSS Framework.", alttxt:"Tailwind CSS", image:TailwindImg, category:"frontend"},
   {header:"MongoDB", text:"NoSQL Database.", alttxt:"MongoDB", image:MongoDbImg, category:"database"},
+  {header:"Git", text:"Version Control.", alttxt:"Git", image:GitImg, category:"tool"},
+  {header:"GitHub", text:"Version Control.", alttxt:"GitHub", image:GitHubImg, category:"tool"},
+  {header:"Node.JS", text:"JS Runtime Environment.", alttxt:"Node.JS", image:NodeJSImg, category:"tool"},
+  {header:"Socket.IO", text:"JS Library.", alttxt:"Socket.IO", image:SocketIOImg, category:"tool"}
 ]
 
 function App() {
-      const[skill, setSkill] = useState("all")
+      const[skill, setSkill] = useState("")
   return (
     <>
     <div className="flex flex-col" id="home"></div>
@@ -54,8 +62,8 @@ function App() {
 
     <div className="flex flex-col" id="about">
       <Divider text="About Me"/>
-      <p className="text-platinum text-2xl mx-[min(10%,200px)] my-1.5 indent-25">Hi there! I’m a senior Computer Science major at Florida Atlantic University. My favorite thing about software engineering is the combination of creativity and problem solving. I specialize in the MERN tech stack, and I’m always eager to expand my knowledge and work on new projects.</p>
-      <p className="text-platinum text-2xl mx-[min(10%,200px)] my-1.5 indent-25">Currently, I"m learning Swift, SQL, and Docker.</p>
+      <p className="text-platinum text-2xl mx-[min(10%,200px)] my-1.5 indent-25">Hi there! I'm a senior Computer Science major at Florida Atlantic University. My favorite thing about software engineering is the combination of creativity and problem solving. I specialize in the MERN tech stack, and I’m always eager to expand my knowledge and work on new projects.</p>
+      <p className="text-platinum text-2xl mx-[min(10%,200px)] my-1.5 indent-25">Currently, I'm learning Swift, SQL, ROS2, and Docker.</p>
     </div>
     <div id="projects">
       <Divider text="Projects"/>
@@ -69,15 +77,15 @@ function App() {
       <Divider text="Skills"/>
     </div>
     <div className=" flex justify-center text-[#0E3938] text-lg]">
-      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("all")}>All</button>
-      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("language")}>Languages</button>
-      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("frontend")}>Frontend</button>
-      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("backend")}>Backend</button>
-      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("database")}>Database</button>
-      <button className="bg-tropical-teal px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1" onClick={() => setSkill("tool")}>Tools</button>
+      <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="all"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("all")}>All</button>
+      <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="language"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("language")}>Languages</button>
+      <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="frontend"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("frontend")}>Frontend</button>
+      <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="backend"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("backend")}>Backend</button>
+      <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="database"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("database")}>Database</button>
+      <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="tool"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("tool")}>Tools</button>
     </div> 
     <div className="flex flex-wrap justify-center w-full my-5">
-    {Skills.filter(item => skill==="all" || item.category == skill).map(filtereditem => <SkillCard image={filtereditem.image} alttxt={filtereditem.alttxt} header={filtereditem.header} text={filtereditem.text}/>)}
+    {Skills.filter(item => skill==="all"|| skill==="" || item.category == skill).map(filtereditem => <SkillCard image={filtereditem.image} alttxt={filtereditem.alttxt} header={filtereditem.header} text={filtereditem.text}/>)}
     </div>
     <Divider text="Contact Me"/>
     <div className="flex justify-center">
