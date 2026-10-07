@@ -1,22 +1,24 @@
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xgaoegne");
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <p className="text-platinum text-xl">Thank you! :)</p>;
   }
   return (
-    <form className="bg-platinum text-midnight-violet border-tropical-teal p-2 border-2 rounded flex flex-col mx-[min(10%,300px)] w-[max(50%,200px)] mb-5" action="https://formspree.io/f/xgaoegne" method="POST" onSubmit={handleSubmit}>
-      <label className="" htmlFor="email">
-        Email Address
-      </label>
+    <form className="relative text-midnight-violet p-2 border-2 border-none flex flex-col mx-[min(10%,300px)] w-[max(40%,300px)] mb-5" action="https://formspree.io/f/xgaoegne" method="POST" onSubmit={handleSubmit}>
       <input
         id="email"
         type="email" 
         name="email"
-        className='border-2 rounded border-tropical-teal my-2'
+        placeholder=" "
+        className="peer border-2 rounded bg-platinum border-tropical-teal my-3 focus:outline-none"
       />
+      <label className="absolute text-midnight-violet top-5 left-3 transition-all ease-in-out peer-focus:top-0 peer-focus:text-sm peer-focus:text-platinum peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-platinum" htmlFor="email">
+        Email Address
+      </label>
+    
       <ValidationError 
         prefix="Email" 
         field="email"
@@ -25,8 +27,10 @@ function ContactForm() {
       <textarea
         id="message"
         name="message"
-        className='border-2 rounded border-tropical-teal my-2'
+        placeholder=" "
+        className="peer/second border-2 rounded border-tropical-teal bg-platinum my-3 focus:outline-none"
       />
+      <label className="absolute text-midnight-violet top-18 left-3 transition-all ease-in-out duration-100 peer-focus/second:top-13 peer-focus/second:text-platinum peer-focus/second:text-sm peer-not-placeholder-shown/second:top-13 peer-not-placeholder-shown/second:text-sm peer-not-placeholder-shown/second:text-platinum" htmlFor="message">Message</label>
       <ValidationError 
         prefix="Message" 
         field="message"
