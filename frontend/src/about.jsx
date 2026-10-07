@@ -1,3 +1,4 @@
+import ResumePDF from "./assets/ZeporahJerome_Resume.pdf"
 function About(){
  return (
     <div className="rounded-xl bg-linear-to-br from-platinum to-frozen-water max-w-150 px-20 py-15 mx-auto my-15">
@@ -29,6 +30,8 @@ function About(){
                     </g>
                 </svg>
             </a>
+
+            <a className="my-auto mx-1 bg-indigo-bloom text-platinum px-1 rounded transition duration-1oo ease-in-out hover:-translate-y-1" href={ResumePDF} target="_blank" rel="noopener noreferrer">View Resume</a>
         </div>
     </div>
 )}

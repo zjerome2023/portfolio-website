@@ -30,7 +30,7 @@ const Skills = [
 ]
 
 function App() {
-      const[skill, setSkill] = useState("")
+      const[skill, setSkill] = useState("all")
   return (
     <>
     <div className="flex flex-col" id="home"></div>
@@ -60,22 +60,20 @@ function App() {
      <span></span> {/* Add image here */}
       <span><About/></span>
 
-    <div className="flex flex-col" id="about">
-      <Divider text="About Me"/>
-      <p className="text-platinum text-2xl mx-[min(10%,200px)] my-1.5 indent-25">Hi there! I'm a senior Computer Science major at Florida Atlantic University. My favorite thing about software engineering is the combination of creativity and problem solving. I specialize in the MERN tech stack, and I’m always eager to expand my knowledge and work on new projects.</p>
-      <p className="text-platinum text-2xl mx-[min(10%,200px)] my-1.5 indent-25">Currently, I'm learning Swift, SQL, ROS2, and Docker.</p>
+    {/* Trying to format this section better. */}
+    <Divider text="About Me" id="about"/>
+    <div className="flex flex-col"> 
+      <p className="text-platinum text-lg mx-[min(70%,300px)] my-1.5">Hi there! I'm a senior Computer Science major at Florida Atlantic University. My favorite thing about software engineering is the combination of creativity and problem solving. I specialize in the MERN tech stack, and I’m always eager to expand my knowledge and work on new projects.</p>
+      <p className="text-platinum text-lg mx-[min(70%,300px)] my-1.5">Currently, I'm learning Swift, SQL, ROS2, and Docker.</p>
     </div>
-    <div id="projects">
-      <Divider text="Projects"/>
-    </div>
+
+    <Divider text="Projects" id="projects"/>
     <div className="flex flex-wrap justify-center w-full my-5">
       <LinkCard title="Draw & Guess" text="A real-time multiplayer drawing and guessing game built with React, Node.js, Socket.io, and MongoDB." github="https://github.com/zjerome2023/Draw-and-Guess" link="https://draw-and-guess-1pmz.onrender.com/"/>
       <LinkCard title="BudgetCash" text="A full-stack expense tracking web app that helps you track daily spending, with a visual dashboard to help you understand your habits." github="https://github.com/zjerome2023/Budget-Cash" link="https://budgetcash.netlify.app"/>
       <LinkCard title="Task Manager" text="A full-stack task manager to manage your tasks. Data is stored in MongoDB and served through a REST API." github="https://github.com/zjerome2023/Full-Stack-Task-Manager" link="https://to-do-app-lahr.onrender.com/"/>
     </div>
-    <div id="skills">
-      <Divider text="Skills"/>
-    </div>
+    <Divider text="Skills" id="skills"/>
     <div className=" flex justify-center text-[#0E3938] text-lg]">
       <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="all"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("all")}>All</button>
       <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="language"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("language")}>Languages</button>
@@ -85,9 +83,9 @@ function App() {
       <button className={`px-2 py-1 mx-1 my-1 rounded-md transition ease-in-out hover:bg-electric-aqua hover:-translate-y-1 ${skill=="tool"? "bg-electric-aqua":"bg-tropical-teal"}`} onClick={() => setSkill("tool")}>Tools</button>
     </div> 
     <div className="flex flex-wrap justify-center w-full my-5">
-    {Skills.filter(item => skill==="all"|| skill==="" || item.category == skill).map(filtereditem => <SkillCard image={filtereditem.image} alttxt={filtereditem.alttxt} header={filtereditem.header} text={filtereditem.text}/>)}
+    {Skills.filter(item => skill==="all" || item.category == skill).map(filtereditem => <SkillCard image={filtereditem.image} alttxt={filtereditem.alttxt} header={filtereditem.header} text={filtereditem.text}/>)}
     </div>
-    <Divider text="Contact Me"/>
+    <Divider text="Contact Me" id="contact"/>
     <div className="flex justify-center">
       <ContactForm/>
     </div>
